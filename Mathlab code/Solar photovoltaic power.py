@@ -6,7 +6,7 @@ from datetime import datetime
 dates = []
 data_values = []
 
-# Read data from the CSV file
+# Read data from the CSV file : https://www.renewables.ninja/
 with open('/home/neo/Downloads/Tekno-Catalay-2024/Mathlab code/kwhwallon.csv', 'r') as file:
     # Create a CSV reader object
     reader = csv.reader(file, delimiter=',')
