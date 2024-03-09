@@ -1,2 +1,2 @@
 # Tekno-Catalay-2024
-This repo reprensent my work during the hackathon by Tekno-Family
+This repository represent a commun work for Tekno-Family , Subject : Tekno Catalay
