@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import csv
 from datetime import datetime
+from matplotlib.dates import DateFormatter
 
 # Initialize lists to store the data
 dates = []
@@ -22,9 +23,18 @@ with open('/home/neo/Downloads/Tekno-Catalay-2024/Mathlab code/kwhwallon.csv', '
         data_values.append(float(row[-1]))  # Assuming the last column contains the values
 
 # Plot the data
-plt.plot(dates, data_values)
+plt.figure(figsize=(10, 6))  # Adjust figure size
+plt.plot(dates, data_values) 
 plt.xlabel('Date')
 plt.ylabel('Value')
 plt.title('Results: Solar photovoltaic power (PV) (https://www.renewables.ninja/)')
+ # Add markers and customize color
+# Customize date format on x-axis
+date_form = DateFormatter("%Y-%m-%d")
+plt.gca().xaxis.set_major_formatter(date_form)
+plt.gcf().autofmt_xdate()  # Rotate x-axis labels for better readability
+
 plt.grid(True)
+plt.tight_layout()  # Adjust layout to prevent clipping of labels
+plt.savefig('spp.png')
 plt.show()
